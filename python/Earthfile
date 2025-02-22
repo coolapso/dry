@@ -8,7 +8,7 @@ VENV:
 DEPS:
   FUNCTION
     LOCALLY
-      RUN pip install -r requirements.txt
+      RUN source venv/bin/activate && pip install -r requirements.txt
 
 INIT:
   FUNCTION
