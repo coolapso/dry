@@ -1,0 +1,23 @@
+name: Release
+on: 
+  workflow_call:
+    outputs:
+      verison: ${{ jobs.release.outputs.version }}
+  workflow_dispatch:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      version: ${{ steps.semrel.outputs.version }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: go-semantic-release/action@v1
+        id: semrel
+        with:
+          custom-arguments: '--commit-analyzer-opt patch_release_rules=fix,ref,build'
