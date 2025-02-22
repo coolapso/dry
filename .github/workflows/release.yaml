@@ -23,3 +23,7 @@ jobs:
         id: semrel
         with:
           custom-arguments: '--commit-analyzer-opt patch_release_rules=fix,ref,build'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+
