@@ -12,3 +12,16 @@ I don't accept contributions to this repository, however I am open to feedback o
 <a href="https://www.buymeacoffee.com/coolapso" target="_blank">
   <img src="https://cdn.buymeacoffee.com/buttons/default-yellow.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" />
 </a>
+
+
+## Go
+
+Contains Go specific stuff
+
+## Python
+
+Contains python specific stuff
+
+## .github/workflows
+
+Contains the reusable workflows
