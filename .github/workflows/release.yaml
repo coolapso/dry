@@ -2,7 +2,9 @@ name: Release
 on: 
   workflow_call:
     outputs:
-      verison: ${{ jobs.release.outputs.version }}
+      verison:
+        description: "Release version"
+        value: ${{ jobs.release.outputs.version }}
   workflow_dispatch:
   push:
     branches:
