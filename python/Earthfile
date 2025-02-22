@@ -1,0 +1,16 @@
+VERSION 0.8
+
+VENV:
+  FUNCTION
+    LOCALLY
+      RUN python -m venv venv
+
+DEPS:
+  FUNCTION
+    LOCALLY
+      RUN pip install -r requirements.txt
+
+INIT:
+  FUNCTION
+    DO +VENV
+    DO +DEPS
