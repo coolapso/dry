@@ -1,6 +1,11 @@
 name: Release
 on: 
   workflow_call:
+    inputs:
+      dev:
+        required: false
+        type: boolean
+        default: false
     outputs:
       verison:
         description: "Release version"
@@ -23,6 +28,7 @@ jobs:
         id: semrel
         with:
           custom-arguments: '--commit-analyzer-opt patch_release_rules=fix,ref,build'
+          allow-initial-development-versions: ${{ inputs.dev }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
