@@ -36,4 +36,4 @@ jobs:
           echo "Going to build: $VERSION_TAG || '${{ env.VERSION_TAG }}'"
 
       - name: Build and push
-        run: Earthly +publish --tag ${{ env.VERSION_TAG }}
+        run: earthly +publish --tag ${{ env.VERSION_TAG }}
